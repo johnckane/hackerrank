@@ -4,7 +4,7 @@
 # the space before the second. Using a positive lookahead gets around this issue.
 import sys, re
 #input_data =  sys.stdin.readlines()
-input_data = open("C:\\Users\\jokane\\Desktop\\HackerRank\\RegEx\\Applications\\Medium\\find-a-word-input.txt", "r").readlines()
+ input_data = open("C:\\Users\\jokane\\Desktop\\HackerRank\\RegEx\\Applications\\Medium\\find-a-word-input.txt", "r").readlines()
 n = int(input_data[0])
 t = int(input_data[n+1])
 for word in input_data[(1+n+1):]:

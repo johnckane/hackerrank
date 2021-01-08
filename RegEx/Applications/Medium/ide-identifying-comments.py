@@ -1,14 +1,12 @@
 # Solves this application problem: https://www.hackerrank.com/challenges/detect-the-domain-name
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 import sys, re
-input_data =  sys.stdin.readlines()
-dlist=[]
+#input_data =  sys.stdin.readlines()
+input_data = open("C:\\Users\\jokane\\Desktop\\HackerRank\\RegEx\\Applications\\Medium\\ide-identifying-comments-input1.txt", "r").readlines()
 for line in input_data[1:]:
     regex = re.findall(
-        pattern = "(?:https?:\/\/)(?:ww(?:w|2)\.)?((?:[A-Za-z0-9_-]{1,}\.){1,}[A-Za-z0-9]{1,})",
+        pattern = "(\/\/.*$)|(\/\*\*.*\n.*\*\*\/)",
         string = line 
     )
-    for m in regex:
-        dlist.append(m)
+    print(regex)
     del regex
-print(";".join(domain for domain in sorted(set(dlist))))
